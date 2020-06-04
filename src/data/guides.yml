@@ -1,0 +1,9 @@
+- name: HLA Reporting Implementation Guide
+  uri: http://fhir.b12x.org/ig/hla-reporting/
+  description: This is a description of the guide. This is a description of the guide. This is a description of the guide.
+  latestVersion: 0.1.0-STU1
+
+- name: HL7 FHIR US Core Implementation Guide
+  uri: https://www.hl7.org/fhir/us/core/
+  description: This is a description of the guide. This is a description of the guide. This is a description of the guide.
+  latestVersion: 3.1.0

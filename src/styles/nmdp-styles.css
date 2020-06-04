@@ -1,0 +1,31 @@
+.nmdp-header {
+    background-color: #63a70a;
+    margin-bottom: 1.45rem;
+}
+
+.nmdp-nav-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nmdp-nav {
+    display: flex; 
+    flex: 1;
+}
+
+.nmdp-nav-item {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.nmdp-nav-item-link {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}

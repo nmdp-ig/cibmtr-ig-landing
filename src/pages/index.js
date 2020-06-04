@@ -1,22 +1,45 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql } from 'gatsby'
+import GuideLink from "../components/guide-link"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({
+  data: {
+    allGuidesYaml: { nodes },
+  },
+}) => {
+  const Guides = nodes.map(node => <GuideLink key={ node.id } guide={ node } />)
+  
+  return <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <p>
+        Are creatures of the cosmos cosmos as a patch of light hydrogen atoms hundreds of 
+        thousands cosmic fugue. From which we spring a still more glorious dawn awaits 
+        kindling the energy hidden in matter intelligent beings consciousness the only home 
+        we've ever known. Great turbulent clouds a still more glorious dawn awaits not a 
+        sunrise but a galaxyrise finite but unbounded Orion's sword finite but unbounded. 
+        Shores of the cosmic ocean great turbulent clouds permanence of the stars star stuff 
+        harvesting star light intelligent beings Orion's sword and billions upon billions 
+        upon billions upon billions upon billions upon billions upon billions.
+    </p>
+    <h2>Implementation Guides</h2>
+    <ul>{ Guides }</ul>
   </Layout>
-)
+}
 
 export default IndexPage
+
+export const query = graphql`
+  query IndexPageQuery {
+    allGuidesYaml {
+      nodes {
+        id
+        name
+        uri
+        description
+        latestVersion
+      }
+    }
+  }
+`
