@@ -13,6 +13,13 @@ const Layout = ({ children }) => {
           title
         }
       }
+      file(relativePath: { eq: "btmlogo.png" }) {
+        childImageSharp {
+          fixed(width: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       allMarkdownRemark {
         edges {
           node {
@@ -30,7 +37,9 @@ const Layout = ({ children }) => {
   `)
   return (
     <>
-      <Header menuLinks={data.allMarkdownRemark.edges} siteTitle={data.site.siteMetadata.title} />
+      <Header menuLinks={data.allMarkdownRemark.edges} 
+              siteTitle={data.site.siteMetadata.title}
+              file={data.file} />
       <div
         style={{
           margin: `0 auto`,

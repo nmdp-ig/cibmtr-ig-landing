@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `CIBMTR HL7 FHIR Implementation Guides`,
+    title: `HL7-FHIR Implementation Guides`,
     description: `Description for SEO / Google`,
     author: `CIT`,
     menuLinks: [

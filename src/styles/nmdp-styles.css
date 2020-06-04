@@ -1,7 +1,7 @@
-.nmdp-header {
+/* .nmdp-header {
     background-color: #63a70a;
     margin-bottom: 1.45rem;
-}
+} */
 
 .nmdp-nav-wrapper {
     margin: 0 auto;
@@ -21,11 +21,45 @@
     padding: 1rem;
 }
 
+.nmdp-nav-item {
+    list-style-type: none;
+    padding: 1rem;
+    
+}
+
 .nmdp-nav-item-link {
-    color: white;
     text-decoration: none;
+    color: inherit;
+}
+
+.nmdp-nav-item-link:hover{
+    color: #0079C1;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.nmdp-header {
+background-color:rgb(255, 255, 255);
+border-bottom-color:rgb(189, 204, 42);
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px;
+border-bottom-style:solid;
+border-bottom-width:4px;
+border-left-color:rgb(113, 113, 113);
+border-left-style:none;
+border-left-width:0px;
+border-right-color:rgb(113, 113, 113);
+border-right-style:none;
+border-right-width:0px;
+border-top-color:rgb(113, 113, 113);
+border-top-left-radius:0px;
+border-top-right-radius:0px;
+border-top-style:none;
+border-top-width:0px;
+color:#00a0dd;
+font-family:Helvetica, Arial, sans-serif;
+font-size:14px;
+margin-bottom:0px;
 }
