@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/cibmtr-ig-landing",
   siteMetadata: {
     title: `HL7-FHIR Implementation Guides`,
     description: `Description for SEO / Google`,
