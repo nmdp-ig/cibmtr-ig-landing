@@ -1,5 +1,5 @@
 - name: HLA Reporting Implementation Guide
-  uri: https://nmdp-bioinformatics.github.io/hla-reporting-ig/
+  uri: https://fhir.nmdp.org/ig/hla-reporting/
   description: This is a description of the guide. This is a description of the guide. This is a description of the guide.
   latestVersion: 0.1.0-STU1
 
