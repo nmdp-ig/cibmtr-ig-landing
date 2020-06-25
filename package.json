@@ -1,8 +1,8 @@
 {
   "name": "cibmtr-igs-gatsby",
-  "private": true,
+  "private": false,
   "description": "A landing page for accessing CIBMTR HL7 FHIR implementation guides.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "CIBMTR Dev Team",
   "dependencies": {
     "gatsby": "^2.22.15",
@@ -34,7 +34,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
