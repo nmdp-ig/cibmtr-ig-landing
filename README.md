@@ -113,9 +113,58 @@ Review the Gatsby project structure [guide](https://www.gatsbyjs.org/docs/gatsby
 **`src/components/seo.js`** - Code for manipulating the search engine optimization for the site.
 
 ## Development How-To
-### How To: Add/Remove/Modify an IG
+> IDE Recommendation: Visual Studio Code is available on all platforms, is light-weight, will not pollute your source code with configuration files, and has many one-click install plugins that make developing a Javascript-based site easy.
+
+### How To: Add/Remove/Modify an IG Link
+Implementation Guide Links are programatically created by Gatsby. You input data into the data store, you query for that same data and pass it into the page that needs it, and then refer to it in the HTML where you want it.
+
+**`DATA INPUT`** `src/data/guides.yml` - This file is a list of objects. It defines the schema for the object and lists all the values. Much like a database table or JSON, properties are shared by all objects; values are object-specific. This data is put into the Gatsby data store.
+
+**`DATA QUERY`** `src/pages/index.js:33` - This is your call to "the backend". It is a GraphQL query on the index page, where the guide links display. Whatever data you want to display, ask for it here.
+
+**`DATA DISPLAY`** `src/components/guide-link.js` - This is where you can change the HTML. The data from your query is passed into this component. You can refer to the data with the pattern `{ guide.property_name }` in the HTML.
+
+If you make changes in one of these files, verify in the other two files that you have what you need before saving or building. 
+
 ### How To: Add/Remove/Modify a supplementary web page
+This site can have any number of extra, supplementary pages. These pages, once created, can be linked to in the navigation bar at the top of each page.
+
+**`CONTENT`** `src/pages/page_name.md` - Pages are added as Markdown files in the pages sub-directory. Each page, like a blog post in other frameworks, has a `frontmatter` section at the top of the page that looks like this:
+
+    ---
+    title: "About Us"
+    ---
+
+Think of this like a custom data object for the page. Anything you add here as a key/value pair can be referenced on the page it is found on.
+
+Below the frontmatter section is the content section. Use markdown syntax to create or modify the content of the page.
+
+**`TEMPLATED CONTENT`** `src/templates/supplementary-page.js` - This is the HTML template that encapsulates the supplementary page content. It uses the layout component to ensure that the navbar and styling are consistent across all the pages. Modifying the HTML here will change every supplementary page.
+
+**`DATA QUERY`** `src/templates/supplementary-page.js:15` - Here again we have a call to "the backend". This query gets the HTML compiled from the markdown and injects it into the template. It also asks for the frontmatter from the page and passes it in as well. If you add more or less frontmatter in the markdown, ask for it here.
+
+**`NAV BAR LINKS`** `gatsby-config.js:7` - Nav bar links need to be referenced in the config file so that routes can be produced at build time. If you add or remove a supplementary page from the nav bar, modify this list of menu links as well.
+
 ### How To: Modify the styling of the site
+There are two style sheets in this project:
+
+- `src/components/layout.css` - If you want to change the look and feel of the site overall, modify this file. Each page employs the layout component so changes made to this file will have a global effect.
+
+- `src/styles/nmdp-styles.css` - This is where most of the branding-related CSS lives. 
+
+> Additional style sheets may be added or removed by modifying the imports in `gatsby-browser.js`. If running `gatsby develop` you may need to restart the dev server for these changes to apply.
+
 ### How To: Change what links display in the nav bar
+Open `gatsby-config.js` and modify the array of `menuLinks` on line 7. 
+
 ### How To: Add an image to the site
+> You are able to add images to pages with standard React syntax; however, Gatsby comes with powerful image transformation functionality that can be employed for auto-magical image optimization.
+
+1. Add the image to the `src/images` folder. Gatsby will scan this folder early in the build process and input image meta data into the GraphQL data source.
+2. Create a GraphQL query on the component page (_not markdown pages_) where you want the processed image to appear or pass it into a component from another page. 
+3. Create an <Img> element on the page and reference the query data in it.
+
+It is a little complex but there are many [good tutorials](https://www.gatsbyjs.org/docs/using-gatsby-image/) for this functionality.      
+
 ### How To: Update SEO
+Review [this tutorial](https://www.gatsbyjs.org/docs/add-seo-component/) from Gatsby.

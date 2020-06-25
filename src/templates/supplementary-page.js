@@ -6,6 +6,7 @@ export default function SupplementaryPage({ data }) {
   const suppPage = data.markdownRemark
   return (
     <Layout>
+      {/* Are you scared? Don't be scared! */}
       <div dangerouslySetInnerHTML={{ __html: suppPage.html }} />
     </Layout>
   )
