@@ -14,7 +14,7 @@ const IndexPage = ({
   return <Layout>
     <SEO title="Home" />
     <p className="nmdp-main-blurb">
-      Implementation Guides for Be The Match managed by the National Marrow Donor Program.
+      Implementation Guides for Be The Match maintained and operated by the National Marrow Donor Program.
     </p>
     <ul className="nmdp-card-list">{Guides}</ul>
   </Layout>
