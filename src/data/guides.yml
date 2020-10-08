@@ -1,9 +1,19 @@
 - name: HLA Reporting Implementation Guide
-  uri: https://fhir.nmdp.org/ig/hla-reporting/
-  description: This is a description of the guide. This is a description of the guide. This is a description of the guide.
-  latestVersion: 0.1.0-STU1
+  uri: http://fhir.nmdp.org/ig/hla-reporting/
+  description: FHIR IG for reporting HLA. This is based on the Genomics Reporting IG developed by the HL7 Clinical Genomics workgroup.
+  latestVersion: 0.1.0
 
-- name: HL7 FHIR US Core Implementation Guide
-  uri: https://www.hl7.org/fhir/us/core/
-  description: This is a description of the guide. This is a description of the guide. This is a description of the guide.
-  latestVersion: 3.1.0
+- name: CIBMTR Reporting Implementation Guide
+  uri: http://fhir.nmdp.org/ig/cibmtr-reporting
+  description: FHIR IG that describes profiles for tranplant data reporting to CIBMTR, all based on the HL7 FHIR US Core IG. Currently only includes Patient profile 
+  latestVersion: 0.1.0-SNAPSHOT
+  
+# - name: HL7 FHIR US Core Implementation Guide
+#   uri: http://www.hl7.org/fhir/us/core/
+#   description: This is an external IG, used to derive the CIBTMR Reporting IG. Based on FHIR 4.0.1. 
+#   latestVersion: 3.1.0
+
+# - name: HL7 FHIR Clinical Genomics Implementation Guide
+#   uri: http://hl7.org/fhir/uv/genomics-reporting/ 
+#   description: This is an externally developed IG, used to derive the HLA Reporting IG. Based on FHIR 4.0.1. 
+#   latestVersion: STU1

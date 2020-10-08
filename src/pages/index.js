@@ -14,7 +14,9 @@ const IndexPage = ({
   return <Layout>
     <SEO title="Home" />
     <p className="nmdp-main-blurb">
-      Implementation Guides for Be The Match maintained and operated by the National Marrow Donor Program.
+      This page summarizes HL7 FHIR activities, tools, and endpoints available at NMDP & CIBMTR. These include 
+      locally developed FHIR Implementations Guides (IGs), terminologies (code systems, value sets, identifiers), 
+      and applications.
     </p>
     <ul className="nmdp-card-list">{Guides}</ul>
   </Layout>
