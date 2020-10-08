@@ -1,7 +1,7 @@
 module.exports = {
   // pathPrefix: "/cibmtr-ig-landing",
   siteMetadata: {
-    title: `HL7-FHIR Implementation Guides`,
+    title: `HL7® FHIR®`,
     description: `Description for SEO / Google`,
     author: `CIBMTR Dev Team`,
     menuLinks: [

@@ -24,7 +24,11 @@
     "prettier": "2.0.5"
   },
   "keywords": [
-    "CIBMTR", "NMDP", "HL7", "FHIR", "Implementation Guide"
+    "CIBMTR",
+    "NMDP",
+    "HL7",
+    "FHIR",
+    "Implementation Guide"
   ],
   "license": "MIT",
   "scripts": {
