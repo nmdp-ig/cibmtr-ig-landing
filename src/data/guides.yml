@@ -8,10 +8,10 @@
   description: FHIR IG that describes profiles for tranplant data reporting to CIBMTR, all based on the HL7 FHIR US Core IG. Currently only includes Patient profile 
   latestVersion: 0.1.0-SNAPSHOT
   
-#- name: Terms of Use | Privacy Policy | EEO/Affirmative Action Employer 
-#  uri: https://bethematchclinical.org/about-us/terms-of-use/
-#  description: The terms of use covers the above main areas: 
-#  latestVersion: Current 
+- name: Terms of Use  Privacy Policy EEO/Affirmative Action Employer 
+  uri: https://bethematchclinical.org/about-us/terms-of-use/
+  description: The terms of use covers the above main areas: 
+  latestVersion: Current 
 #
 # - name: HL7 FHIR Clinical Genomics Implementation Guide
 #   uri: http://hl7.org/fhir/uv/genomics-reporting/ 
