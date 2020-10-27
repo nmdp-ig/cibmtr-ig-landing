@@ -4,7 +4,7 @@
   latestVersion: 0.1.0
 
 - name: CIBMTR Reporting Implementation Guide
-  uri: http://fhir.nmdp.org/ig/cibmtr-reporting
+  uri: http://fhir.nmdp.org/ig/cibmtr-reporting/
   description: FHIR IG that describes profiles for tranplant data reporting to CIBMTR, all based on the HL7 FHIR US Core IG. Currently only includes Patient profile 
   latestVersion: 0.1.0-SNAPSHOT
   
