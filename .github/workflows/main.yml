@@ -1,19 +1,19 @@
-name: trigger gitlab job
-on: [push]
-jobs:
+# name: trigger gitlab job
+# on: [push]
+# jobs:
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - name: trigger Job
-      uses: appleboy/gitlab-ci-action@master
-      with:
-        url: https://gitlab.com/bethematch/appdev/fhir-implementation-guide/github-cibmtr-ig-kick
-        ref: master
-        token: glpat-W-Gum3mBus5CGJ5x_m55
-        GITLAB_PROJECT_ID: 31733540
-        debug: true
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: trigger Job
+#       uses: appleboy/gitlab-ci-action@master
+#       with:
+#         url: https://gitlab.com/bethematch/appdev/fhir-implementation-guide/github-cibmtr-ig-kick
+#         ref: master
+#         token: glpat-W-Gum3mBus5CGJ5x_m55
+#         GITLAB_PROJECT_ID: 31733540
+#         debug: true
 name: Gitlab CI
 
 # Controls when the workflow will run
