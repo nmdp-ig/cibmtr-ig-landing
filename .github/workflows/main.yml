@@ -30,4 +30,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: trigger pipeline
 #        run: curl -X POST -F token=glpat-W-Gum3mBus5CGJ5x_m55 -F ref=master https://gitlab.com/api/v4/projects/:31733540/trigger/pipeline
-        run: curl --request POST "https://gitlab.com/api/v4/projects/31733540/trigger/pipeline?token=glpat-W-Gum3mBus5CGJ5x_m55&ref=master
+        run: curl --request POST "https://gitlab.com/api/v4/projects/31733540/trigger/pipeline?token=glpat-W-Gum3mBus5CGJ5x_m55&ref=master"
