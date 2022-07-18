@@ -10,6 +10,6 @@ jobs:
       uses: appleboy/gitlab-ci-action@master
       with:
         url: "https://gitlab.com"
-        token: 9685fd3f041c3ea0889aadff0f8553
+        token: "glpat-W-Gum3mBus5CGJ5x_m55"
         project_id: 31733540
         debug: true
