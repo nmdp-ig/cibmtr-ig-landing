@@ -12,4 +12,4 @@ jobs:
         url:
         token: glpat-W-Gum3mBus5CGJ5x_m55
         GITLAB_PROJECT_ID: 31733540
-        debug: on
+        debug: true
