@@ -1,5 +1,5 @@
 name: trigger gitlab job
-on: [push, commit]
+on: [push]
 jobs:
 
   build:
@@ -11,5 +11,5 @@ jobs:
       with:
         url:
         token: glpat-W-Gum3mBus5CGJ5x_m55
-        project_id: 31733540
-        debug: true
+        GITLAB_PROJECT_ID: 31733540
+        debug: on
