@@ -27,13 +27,13 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl --request POST "https://gitlab.com/api/v4/projects/31733540/trigger/pipeline?token=${{ secrets.GITHUBGITLABACTIONSKEY }}&ref=master"&ref=master"
+        run: curl --request POST "https://gitlab.com/api/v4/projects/31733540/trigger/pipeline?token=${{ secrets.GITHUBGITLABACTIONSKEY }}&ref=master"
         # Runs a set of commands using the runners shell
 #      - name: Run a multi-line script
 #        run: |
           # Use a GitHub Actions secret variable in a bash shell
       - name: Step 2 - GitHub Action if statement (true)
         env: 
-          WHO_TO_TRUST: ${{ secrets.GITHUBGITLABCIBMTRLPDOCKER }}
+          WHO_TO_TRUST: ${{ secrets.GITHUBGITLABACTIONSKEY }}
         if:  env.WHO_TO_TRUST == 'TrustNo1'
         run: echo "I know what the secret token is!"
