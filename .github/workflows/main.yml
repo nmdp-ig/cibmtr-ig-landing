@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl --request POST "https://gitlab.com/api/v4/projects/37913762/trigger/pipeline?token=${{ secrets.CIBMTRLPDOCKERTRIGGERTOKEN }}&ref=master"
+        run: curl --request POST "https://gitlab.com/api/v4/projects/31733540/trigger/pipeline?token=${{ secrets.CIBMTRLPDOCKERTRIGGERTOKEN }}&ref=master"
         # Runs a set of commands using the runners shell
 #      - name: Run a multi-line script
 #        run: |
@@ -35,5 +35,4 @@ jobs:
       - name: Step 2 - GitHub Action if statement (true)
         env: 
           WHO_TO_TRUST: ${{ secrets.CIBMTRLPDOCKERTRIGGERTOKEN }}
-        if:  env.WHO_TO_TRUST == 'TrustNo1'
         run: echo "I know what the secret token is!"
