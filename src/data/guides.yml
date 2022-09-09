@@ -10,8 +10,8 @@
 
 - name: CIBMTR Reporting Implementation Guide
   uri: http://fhir.nmdp.org/ig/cibmtr-reporting/
-  description: FHIR IG that describes profiles for tranplant data reporting to CIBMTR, all based on the HL7 FHIR US Core IG. Currently only includes Patient profile 
-  latestVersion: 0.1.0-SNAPSHOT
+  description: FHIR IG that describes profiles, value sets, and guidance for reporting tranplant data to CIBMTR.
+  latestVersion: 0.1.5
   
 - name: Terms of Use and Privacy Policy 
   uri: https://bethematchclinical.org/about-us/terms-of-use/
