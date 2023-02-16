@@ -46,5 +46,8 @@
   },
   "bugs": {
     "url": "https://bugs.nmdmp.org"
+  },
+  "resolutions": {
+    "gatsby-plugin-sharp/probe-image-size": "^7.0.0"
   }
 }
