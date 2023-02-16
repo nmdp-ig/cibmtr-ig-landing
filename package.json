@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "CIBMTR Dev Team",
   "dependencies": {
-    "gatsby": "^3.0.0",
+    "gatsby": "*",
     "gatsby-image": "*",
     "gatsby-plugin-manifest": "*",
     "gatsby-plugin-offline": "*",
