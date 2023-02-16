@@ -28,6 +28,7 @@
     "NMDP",
     "HL7",
     "FHIR",
+    "BETHEMATCH",
     "Implementation Guide"
   ],
   "license": "MIT",
