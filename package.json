@@ -20,9 +20,9 @@
   //   "react-dom": "^16.12.0",
   //   "react-helmet": "^6.0.0"
   // },
-  "devDependencies": {
-    "prettier": "2.0.5"
-  },
+  // "devDependencies": {
+  //   "prettier": "2.0.5"
+  // },
   "keywords": [
     "CIBMTR",
     "NMDP",
