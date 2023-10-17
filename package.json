@@ -1,6 +1,6 @@
 {
   "name": "cibmtr-igs-gatsby",
-  "private": false,
+  // "private": false,
   "description": "A landing page for accessing CIBMTR HL7 FHIR implementation guides.",
   "version": "1.0.0",
   "author": "CIBMTR Dev Team",
