@@ -23,7 +23,7 @@
     grid-row-start: 2;
   }
   .itemshadowbox {
-    border: 3px solid rgb(127, 204, 249);
+    border: 3px solid rgb(0, 121, 193);
     box-shadow: 10px 10px 10px rgb(219, 219, 219);
     padding: 10px 10px;
     grid-column-start: 1;
