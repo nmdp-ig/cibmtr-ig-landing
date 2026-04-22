@@ -1,0 +1,40 @@
+# Deploy static landing page to GitHub Pages
+# Preview at: https://nmdp-ig.github.io/cibmtr-ig-landing/
+#
+# Setup (one-time):
+#   Settings > Pages > Source: GitHub Actions
+#   Settings > Actions > General > Workflow permissions: Read and write
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
