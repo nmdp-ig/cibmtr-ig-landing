@@ -1,98 +1,236 @@
+:root {
+  --nmdp-blue: rgb(0, 53, 94);
+  --fhir-blue: rgb(0, 121, 193);
+  --page-background: #f7f9fb;
+  --card-border: #e1e7ed;
+  --card-shadow: 0 5px 12px rgba(0, 53, 94, 0.18);
+  --card-shadow-hover: 0 8px 18px rgba(0, 53, 94, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  background: var(--page-background);
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .container {
-    display: grid;
-    grid-template-columns: 20;
-    grid-template-rows: 30;
-    grid-gap: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* grid-auto-flow: column; */
-  }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .item-top-links {
-    grid-column-start: 3;
-    grid-column-end: 10;
-    grid-row-start: 1;
-    /* grid-row-end: span ; */
-    align-items: flex-end;
-    background-color: white;
-  }
-  .greenlinetop {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 2;
-  }
-  .itemshadowbox {
-    border: 3px solid rgb(0, 121, 193);
-    box-shadow: 10px 10px 10px rgb(219, 219, 219);
-    padding: 10px 10px;
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .matchshadowbox {
-    border: 1px solid whitesmoke;
-    box-shadow: 5px 5px 5px 5px rgb(219, 219, 219);
-    padding: 50px 50px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 9;
-    font-family: Arial, Helvetica, sans-serif;
-    /* grid-row-end: span 1; */
-    /* background-image: horizontal-gradient(180deg, #fff, #ddd 40%, rgb(246, 246, 246)); */
-  }
-  .hlashadowbox {
-    border: 1px solid whitesmoke;
-    box-shadow: 5px 5px 5px 5px rgb(219, 219, 219);
-    padding: 50px 50px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 9;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .cibmtrshadowbox {
- 
-    border: 1px solid whitesmoke;
-    box-shadow: 5px 5px 5px 5px rgb(219, 219, 219);
-    padding: 50px 50px;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 9;
-    font-family: Arial, Helvetica, sans-serif;
-     /* grid-row-end: span 1; */
-    /* background-image: horizontal-gradient(180deg, #fff, #ddd 40%, rgb(246, 246, 246)); */
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 20px 32px;
+}
+
+.item-BE-The-Match {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  align-self: center;
+  background: #fff;
+}
+
+.item-BE-The-Match img {
+  display: block;
+  width: auto;
+  max-width: 180px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.item-FHIR-logo {
+  grid-column: 4 / 6;
+  grid-row: 1;
+  justify-self: end;
+  background: #fff;
+}
+
+.item-FHIR-logo img {
+  display: block;
+  width: auto;
+  max-width: 120px;
+  height: 74px;
+  object-fit: contain;
+}
+
+.item-top-links {
+  display: none;
+}
+
+.greenlinetop {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.greenlinetop hr {
+  height: 4px;
+  margin: 0;
+  border: 0;
+  background-color: var(--nmdp-blue);
+}
+
+.itemshadowbox {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  padding: 12px 14px;
+  border: 2px solid var(--fhir-blue);
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 53, 94, 0.18);
+}
+
+.itemshadowbox p3 {
+  display: block;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.matchshadowbox,
+.hlashadowbox,
+.cibmtrshadowbox,
+.matchsyncdonorshadowbox,
+.termsofuseshadowbox {
+  display: flex;
+  grid-row: 4;
+  min-width: 0;
+  min-height: 248px;
+  flex-direction: column;
+  padding: 24px 18px 20px;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.matchshadowbox:hover,
+.hlashadowbox:hover,
+.cibmtrshadowbox:hover,
+.matchsyncdonorshadowbox:hover,
+.termsofuseshadowbox:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.ig-card a {
+  color: var(--nmdp-blue);
+  text-decoration: none;
+}
+
+.ig-card a:hover,
+.ig-card a:focus-visible {
+  color: var(--fhir-blue);
+  text-decoration: underline;
+}
+
+.ig-card h3 {
+  min-height: 58px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.18;
+}
+
+.ig-card p3 {
+  display: block;
+}
+
+.ig-card .version {
+  margin-top: 14px;
+  font-size: 0.76rem;
+  line-height: 1.3;
+}
+
+.ig-card hr {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0 16px;
+  border: 0;
+  background-color: var(--nmdp-blue);
+}
+
+.ig-card .description {
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
-  .termsofuseshadowbox {
-    border: 1px solid whitesmoke;
-    box-shadow: 5px 5px 5px 5px rgb(219, 219, 219);
-    padding: 50px 50px;
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 9;
-    font-family: Arial, Helvetica, sans-serif;
-  }
   .item-BE-The-Match {
-    grid-column-start: 1;
-    /* grid-column-end: 2; */
-    grid-row-start: 1;
-    /* grid-row-end: span 1; */
-    background-color: white;
+    grid-column: 1;
   }
+
   .item-FHIR-logo {
-    grid-column-start: end column 1;
-    /* grid-column-end: ; */
-    grid-row-start: 1;
-    background-color: white;
+    grid-column: 3;
   }
-  .toplinkpages {
-    grid-column-start: 1;
-    grid-row-start: 5;
+
+  .matchshadowbox,
+  .hlashadowbox,
+  .cibmtrshadowbox,
+  .matchsyncdonorshadowbox,
+  .termsofuseshadowbox {
+    padding: 22px 16px 18px;
   }
-  
+}
+
+@media (max-width: 640px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 12px 14px 24px;
+  }
+
+  .item-BE-The-Match {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .item-FHIR-logo {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .greenlinetop {
+    grid-row: 3;
+  }
+
+  .itemshadowbox {
+    grid-row: 4;
+  }
+
+  .ig-card {
+    grid-row: auto;
+  }
+
+  .ig-card h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .matchshadowbox,
+  .hlashadowbox,
+  .cibmtrshadowbox,
+  .matchsyncdonorshadowbox,
+  .termsofuseshadowbox {
+    min-height: 0;
+    padding: 20px 18px;
+  }
+}
